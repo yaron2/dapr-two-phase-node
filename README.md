@@ -1,11 +1,11 @@
 # Dapr Two-Phase Commit for Event and State Sample
 
-This sample shows a two-phase commit flow for receiving an event and acknowledging it only if it was persisted to a durable storage.
+This sample shows a two-phase commit flow for receiving an event using an input binding, and acknowledging it only if it was persisted to storage.
 If a failure to deliver the event has occured, state will not be written, and if there was a failure writing to state, the message will be dropped.
 
 This example uses Azure Service Bus Queues for the event delivery and Redis as the state store.
 
-*Note: In Dapr 0.5.0, failed events will be requeued for delivery until considered poison, and then dropped*
+*Note: In Dapr 0.5.0, failed binding events will be requeued for delivery until considered poison, and then dropped*
 
 ## Quick Start
 
