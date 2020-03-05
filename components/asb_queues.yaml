@@ -1,0 +1,12 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: queue1
+spec:
+  type: bindings.azure.servicebusqueues
+  metadata:
+  - name: connectionString
+    value: "<CONNECTION-STRING-HERE>"
+  - name: queueName
+    value: "queue1"
+    
